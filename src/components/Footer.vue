@@ -1,5 +1,5 @@
 <template>
-    <footer class="section-footer border-top">
+    <footer v-bind:style="{ 'background-image': 'url(' + image1 + ')' }" style="background-color:rgb(21, 95, 57);" class="section-footer border-top">
 	<div class="container" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
 		<section class="footer-top padding-y">
 			<div class="row">
@@ -54,7 +54,7 @@
 		</section>	<!-- footer-top.// -->
 
 		<section class="footer-bottom text-center">
-				<p class="text-muted" style="margin-top:20px;"> 2019 Toko Online B2B, All rights reserved </p>
+				<p class="text-muted" style="margin-top:20px;"> 2020 Abubakar, All rights reserved </p>
 				<br>
 		</section>
 	</div><!-- //container -->
@@ -68,14 +68,21 @@ export default {
         products: [
           
         ],
-        image: require('@/assets/images/masjid.png')
+		image: require('@/assets/images/nav/masjid.png'),
+		image1: require('@/assets/images/nav/footer.png')
 
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.title {
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: underline;
+	
+}
 .border-top {
     border-top: 1px solid #e4e4e4 !important;
 }
@@ -91,6 +98,10 @@ export default {
     padding-bottom: 20px;
     border-top: 1px solid ;
 }
+.section-footer{
+	background-repeat: round;
+    background-size: 50% 100%;
+}
 .section-footer ul a {
     color: inherit;
 }
@@ -100,10 +111,14 @@ export default {
 .mt-4, .my-4 {
     margin-top: 1.5rem !important;
 }
- .container{
+.container{
         
-        background-repeat: round;
-        background-size: 100% 100%;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	background-position-y: 60px;
         
-    }
+}
+.text-muted{
+	color:white!important;
+}
 </style>

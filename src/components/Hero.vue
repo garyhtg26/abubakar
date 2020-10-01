@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <template>
    <vueper-slides 
-    :slide-ratio="1 / 4" fixed-height="400px"
+    :slide-ratio="1 / 4" fixed-height="550px"
     ref="myVueperSlides"
     autoplay
     :pause-on-hover="pauseOnHover"
@@ -49,7 +49,7 @@ export default {
     },
     {
       
-      image: require('@/assets/images/8.jpg')
+      image: require('@/assets/images/banners/banner1.jpg')
     },
   ],
   pilihan: [
@@ -96,7 +96,7 @@ export default {
     background-color: #d3dce6;
   }
   .hero{
-    padding-top: 7rem;
+    padding-top: 5rem;
   
   }
   .vcc {

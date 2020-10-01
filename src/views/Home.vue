@@ -2,7 +2,7 @@
   <div class="home">
     <Navbar></Navbar>
       <Hero />
-      <div style="margin-top:-2px; width:100%;" class="px-4">
+      <div style="margin-top:-2px; width:100%;" >
     <el-image :src="src2"></el-image>
   </div>
         <div style="margin-left: 55px; margin-top: 20px;">
@@ -92,44 +92,31 @@
  </div>
    
 
-      <section class="h-100">
-        <div class="container py-5">
+      <section class="h-100" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
+        <div class="container py-5" >
   <div class="row">
     <div class="col-sm">
-        <b-card
-   overlay
-    img-src="https://www.static-src.com/siva/asset//07_2020/BLM_desktop.jpg?output-format=webp"
- 
-    
+      <div class="img-warp">
+        <b-img
+   overlay style="max-width:100%"
+    :src="src3" 
   >
-    
-
-
-  </b-card>
+  </b-img>
+  </div>
     </div>
     <div class="col-sm">
-        <b-card
-   overlay
-    img-src="https://www.static-src.com/siva/asset//07_2020/HOM_desktop.jpg?output-format=webp"
- 
-    
+        <b-img
+   overlay style="max-width:100%"
+    :src="src3" 
   >
-    
-
-
-  </b-card>
+  </b-img>
     </div>
     <div class="col-sm">
-        <b-card
-   overlay
-    img-src="https://www.static-src.com/siva/asset//07_2020/PEL_desktop.jpg?output-format=webp"
- 
-    
+      <b-img
+   overlay style="max-width:100%"
+    :src="src3" 
   >
-    
-
-
-  </b-card>
+  </b-img>
     </div>
   </div>
 </div>
@@ -322,7 +309,8 @@ export default {
       return {
         src: require('@/assets/images/banner1.png'),
          src2: require('@/assets/images/banner2.png'),
-          src3: require('@/assets/images/banner3.png')
+          src3: require('@/assets/images/nav/banner.png'),
+          image: require('@/assets/images/nav/background1.png')
       }
     },
 };
@@ -509,15 +497,16 @@ body {
   font-weight: 600;
   
 }
-.nav-link {
-  background-color: #ededed;
+.nav-link, .nav-link:hover {
+  background-color: #199C43;
   border-radius: 20px !important;
   margin: 10px;
+  color: white;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #fdc830 !important;
+    background-color: #B6AD15 !important;
 }
 .card-img-overlay {
     /* position: absolute; */
