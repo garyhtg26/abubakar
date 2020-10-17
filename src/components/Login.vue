@@ -5,9 +5,10 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
-                <div class="modal-body">
+                <div class="modal-body" v-bind:style="{ 'background-image': 'url(' + image1 + ')' }">
 
-
+                        <router-link class="logo " to="/">Abubakar</router-link>
+                          <h6 style="color:#B6AD15 ;margin-top: -10px;margin-bottom: 30px;font-size: 13px;" class="text-center">Belanja Halal tanpa Riba</h6>
                         <ul class="nav nav-fill nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item mr-2">
                                 <a class="btn-success nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Login</a>
@@ -20,7 +21,7 @@
                         <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
 
-                            <h5 class="text-center">Login Please</h5>
+                            <h5 style="color:black;" class="text-center">Masuk</h5>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -38,7 +39,7 @@
                         </div>
                         <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
 
-                             <h5 class="text-center">Create New Account</h5>
+                             <h5 style="color:black;" class="text-center">Daftar</h5>
 
                             <div class="form-group">
                                 <label for="name">Your name</label>
@@ -84,7 +85,9 @@ export default {
     return {
       name: null,
       email: null,
-      password: null
+      password: null,
+      image: require('@/assets/images/nav/background.png'),
+      image1: require('@/assets/images/nav/background4.png')
     }
   },
 
@@ -145,5 +148,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+  .modal-body{
+        background-position: top;
+    background-repeat: no-repeat;
+    background-size: 500px 160px;
+  }
+   /deep/ .logo:hover,
+   /deep/ .logo:focus,
+   .logo {
+     color:white; 
+     font-size:50px;
+     font-weight: bold;
+     font-family: 'RamadhanKarim';
+         margin-right: 50px;
+             display: block;
+    margin: auto;
+    text-align: center;
+   }
+   .btn-success{
+         background-color: #199C43 !important;
+    border-color: #199C43 !important;
+     
+   }
 </style>

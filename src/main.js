@@ -29,6 +29,7 @@ import store from './store.js';
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import ProductList from './sections/ProductList.vue'
+import LagiPopuler from './sections/LagiPopuler.vue'
 import AddToCart from './components/AddToCart.vue'
 import MiniCart from './components/MiniCart.vue'
 import Footer from './components/Footer.vue'
@@ -75,6 +76,7 @@ Vue.component('Hero', Hero);
 Vue.component('ProductList', ProductList);
 Vue.component('AddToCart', AddToCart);
 Vue.component('MiniCart', MiniCart);
+Vue.component('LagiPopuler', LagiPopuler);
 // Vue.component({Navbar, Hero, ProductList, AddToCart, MiniCart});
 
 

@@ -5,87 +5,110 @@
       <div style="margin-top:-2px; width:100%;" >
     <el-image :src="src2"></el-image>
   </div>
-        <div style="margin-left: 55px; margin-top: 20px;">
-     <template>
-         <el-row :gutter="12">
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/icon/keagamaan.png" alt="Bukalapak">
+        <div style="margin-left: 55px; margin-top: 50px;">
+     
+  <el-row :gutter="12">
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/game.png" alt="abubakar">
+      </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Keagamaan
+   
     </p></div></a></div>
+  
+    </el-col>
+   <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/booking.png" alt="abubakar">
     </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/icon/otomotif.png" alt="Bukalapak">
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Otomotif
+    
     </p></div></a></div>
-    </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/icon/pakaian.png" alt="Bukalapak">
+    
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/umroh.png" alt="abubakar">
+     </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Pakaian Muslim
+      
     </p></div></a></div>
-    </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/icon/travel.png" alt="Bukalapak">
+   
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/wanita.png" alt="abubakar">
+     </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Travel
+      
     </p></div></a></div>
-    </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/kategori/tiket.png" alt="Bukalapak">
+   
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/tiket.png" alt="abubakar">
+     </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Tiket
+      
     </p></div></a></div>
+   
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/emas.png" alt="abubakar">
     </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/kategori/games.png" alt="Bukalapak">
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Games
+      
     </p></div></a></div>
-    </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/kategori/hotel.png" alt="Bukalapak">
+    
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img src="../assets/images/icon/zakat.png" alt="abubakar">
+     </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Hotel
+      
     </p></div></a></div>
-    </router-link>
-  </el-col>
-  <el-col :span="3">
-    <router-link to="/register" tag="a">
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.bukalapak.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <img src="../assets/images/kategori/handphone.png" alt="Bukalapak">
+  
+    </el-col>
+    <el-col :span="3">
+    
+    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
+    <router-link to="/register">
+    <img :src="icon" alt="abubakar">
+     </router-link>
     </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      Handphone
+      
     </p></div></a></div>
-    </router-link>
+   
   </el-col>
   
 </el-row>
-     </template>
+  
  </div>
- <div class="mx-4" style="padding:1em">
+ <div class="mx-4" style="padding:1em;margin-top: 30px;">
     <el-image style="height:150px;" :src="src"></el-image>
+  </div>
+  <div class="container-fluid m-5" style="margin-left:40px;">
+    <h1 style="color:#004E30;text-decoration:underline;font-weight:bold;text-decoration-color: #C6B01B;">Lagi populer</h1>
+    <div class="row" style="height:300px;">
+    <LagiPopuler></LagiPopuler>  
+
+    </div>
   </div>
  <div class="container-fluid " style=" margin-top: -80px;">
    <ProductList></ProductList>
@@ -155,7 +178,7 @@
     </div>
   </header> -->
 </section> 
-<section  class="padding-bottom-sm" style="padding-right:100px; padding-left:100px;">
+<section  class="padding-bottom-sm mt-4" style="padding-right:100px; padding-left:100px;">
 
 <header class="section-heading heading-line">
   <div class="blu-card recommended-product">
@@ -310,7 +333,8 @@ export default {
         src: require('@/assets/images/banner1.png'),
          src2: require('@/assets/images/banner2.png'),
           src3: require('@/assets/images/nav/banner.png'),
-          image: require('@/assets/images/nav/background1.png')
+          image: require('@/assets/images/nav/background1.png'),
+          icon: require('@/assets/images/icon/semua.png').default
       }
     },
 };
@@ -338,12 +362,12 @@ a:active{
 .container-fluid{
    padding: 0;
 }
-.el-card{
+/* .el-card{
   border-radius:  100px !important;
   
   height: 45px;
 
-}
+} */
 .el-card__body {
   padding: 12px !important;
 }
@@ -527,7 +551,8 @@ body {
 .bl-dope-item__body img {
    width: 100%;
     height: auto;
-    min-width: 65px;
+    min-width: 75px;
+    max-height: 80px;
     display: block;
     position: absolute;
     margin: -8px;

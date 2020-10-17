@@ -17,9 +17,11 @@
            <a to="/" class="kategori-text" >Kategory</a>
        
     </template>
-    <b-dropdown-item  >Chat</b-dropdown-item>
-    <b-dropdown-item  >Diskusi</b-dropdown-item>
-    <b-dropdown-item  >Ulasan</b-dropdown-item>
+    <b-dropdown-item  >Motor</b-dropdown-item>
+    <b-dropdown-item  >Handphone</b-dropdown-item>
+    <b-dropdown-item  >Sepeda</b-dropdown-item>
+    <b-dropdown-item  >Olahraga</b-dropdown-item>
+    <b-dropdown-item  >Elektronik</b-dropdown-item>
 </b-dropdown>
             </li>
           
