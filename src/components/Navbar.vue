@@ -252,7 +252,18 @@ export default {
 
   
 }
-
+.notify {
+    position: relative;
+    top: -9px;
+    display: inline-block;
+    padding: .25em .6em;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 3rem;
+    color: #fff;
+    background-color: #fa3434;
+}
 .btn-header{
   margin-right: -10px;
 }

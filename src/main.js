@@ -29,7 +29,7 @@ import store from './stores';
 import Navbar from './components/Navbar.vue'
 import SellerNav from './components/SellerNav.vue'
 import Hero from './components/Hero.vue'
-import ProductList from './sections/ProductList.vue'
+import FlashSale from './sections/FlashSale.vue'
 import LagiPopuler from './sections/LagiPopuler.vue'
 import TopUp from './sections/TopUp.vue'
 import EditProfile from './profile/EditProfile.vue'
@@ -85,7 +85,7 @@ Vue.component('Navbar', Navbar);
 Vue.component('SellerNav', SellerNav);
 Vue.component('Footer', Footer);
 Vue.component('Hero', Hero);
-Vue.component('ProductList', ProductList);
+Vue.component('FlashSale', FlashSale);
 Vue.component('AddToCart', AddToCart);
 Vue.component('MiniCart', MiniCart);
 Vue.component('LagiPopuler', LagiPopuler);
@@ -94,7 +94,7 @@ Vue.component('DaftarTransaksi', DaftarTransaksi);
 Vue.component('Komplain', Komplain);
 Vue.component('Chat', Chat);
 Vue.component('TopUp', TopUp);
-// Vue.component({Navbar, Hero, ProductList, AddToCart, MiniCart});
+// Vue.component({Navbar, Hero, FlashSale, AddToCart, MiniCart});
 
 if (store.state.authentication) {
   axios.defaults.headers.common['Authorization'] =

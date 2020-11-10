@@ -1,68 +1,98 @@
 <template>
-  <div class="products" id="products">
-      <div class="container">
-          <h1 class="text-center p-5">Our Products</h1>
-          <div class="row">
-              
-              <div class="col-md-4">
-                  <div class="card product-item">
-                    <img src="/images/products/product1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Surface Book 2</h5>
-                            <p class="card-text">
-                                Complete your device with Office 365 and get 1TB cloud storage, Excel, Word, PowerPoint & more. Select your suite during checkout.
-                            </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                    </div>
-              </div>
-
-              <div class="col-md-4">
-                  <div class="card product-item">
-                    <img src="/images/products/product2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Surface Laptop 2</h5>
-                            <p class="card-text">
-                               Style and speed. Go beyond the traditional with new Surface Laptop 2. Featuring improved performance and the full Windows 10 Home experience.
-                            </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                    </div>
-              </div>
-
-              <div class="col-md-4">
-                  <div class="card product-item">
-                    <img src="/images/products/product3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Surface Studio 2</h5>
-                            <p class="card-text">
-                                    The ultimate creative studio. Let your ideas flow with brilliant color, blazing graphics, faster processors, intuitive tools, and a stunning, adjustable 28” display.
-
-                            </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                    </div>
-              </div>
-          </div>
-      </div>
-    
+  <div>
+    <v-row>
+      <v-col cols="6" md="3" sm="4" v-for="x in data" :key="x.id">
+        <v-card style="overflow: hidden" class="rounded-lg">
+          <v-card-text class="ma-0 pa-0">
+            <v-img :src="x.thumbnail" max-height="200px"></v-img>
+            <v-checkbox
+              off-icon="mdi-heart"
+              color="red"
+              on-icon="mdi-heart"
+              v-model="x.isWishlist"
+              style="position: absolute; top: 0px; right: 0px"
+              @change="wish(x)"
+            ></v-checkbox>
+            <v-avatar
+              v-if="x.discount_price"
+              color="red"
+              style="position: absolute; top: 10px; left: 5px"
+              size="35px"
+              class="white--text font-weight-bold"
+            >
+              {{ x.discount_display }}%
+            </v-avatar>
+            <v-avatar
+         
+              size="52px"
+              style="position: absolute; z-index: 1; bottom: 5px; right: 5px"
+            >
+     
+            </v-avatar>
+          </v-card-text>
+          <v-card-actions>
+            <v-list class="pa-0 ma-0" dense max-width="100%" three-line>
+              <v-list-item @click="show(x.name)">
+                <v-list-item-content>
+                  <v-list-item-subtitle>{{ x.name }}</v-list-item-subtitle>
+                  <v-list-item-subtitle v-if="!x.discount_price">
+                    {{ x.price | currency }}
+                  </v-list-item-subtitle>
+                  <v-list-item-subtitle v-else>
+                    <span class="text-decoration-line-through red--text">
+                      {{ x.price | currency }}
+                    </span>
+                    <v-divider class="mx-2" vertical></v-divider>
+                    {{ x.discount_price | currency }}
+                  </v-list-item-subtitle>
+                  <v-list-item-subtitle>{{ x.store }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
+import Axios from "axios";
+
 export default {
-  name: "Products",
   props: {
-    msg: String
-  }
+    data: Array,
+  },
+  methods: {
+    show(id) {
+      // const params = typeof id === "number" ? id : id.replace(/[/\s/]/g, "-");
+      this.$router.push(`/test/page/product-details/s/?v=${id}`);
+    },
+    wish(item) {
+      if (item.isWishlist) {
+        Axios.post("/page/wishlist", {
+          product_id: item.id,
+          store_id: item.store_id,
+        })
+          .then((res) => {
+            alert(res.data.message);
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      } else {
+        Axios.delete("/page/wishlist/" + item.id)
+          .then((res) => {
+            alert(res.data.message);
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      }
+    },
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-    .products{
-        margin-top: 7rem;
-        background: #f2f2f2;
-        padding-bottom: 3rem;
-    }
+<style lang="scss" scoped>
 </style>

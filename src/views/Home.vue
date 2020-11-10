@@ -19,7 +19,7 @@
     </div>
   </div>
  <div class="container-fluid " style=" margin-top: -80px;">
-   <ProductList></ProductList>
+   <FlashSale></FlashSale>
  </div>
    
 

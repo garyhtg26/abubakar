@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Admin from './views/Admin.vue';
 import Overview from "./views/Overview.vue";
 import Products from "./views/Products.vue";
+import ProductsList from "./sections/ProductList.vue";
 import Orders from "./views/Orders.vue";
 import Profile from "./views/Profile.vue";
 import Search from "./views/Search.vue";
@@ -16,6 +17,7 @@ import ProductVirtual from "./views/ProductVirtual.vue";
 import Promo from "./views/Promo.vue";
 import Upload from "./form/UploadForm.vue";
 import Payment from "./views/Transaksi.vue";
+import Seller from "./views/DashboardSeller.vue";
 import {fb} from './firebase';
 
 Vue.use(Router);
@@ -24,6 +26,11 @@ const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/page/list',
+      name: 'productList',
+      component: ProductsList,
+    },
     {
       path: '/',
       name: 'home',
@@ -59,6 +66,11 @@ const router = new Router({
       path: '/kategori/sepeda',
       name: 'sepeda',
       component: Category,
+    },
+    {
+      path: '/seller',
+      name: 'seller',
+      component: Seller,
     },
     {
       path: '/wishlist',
