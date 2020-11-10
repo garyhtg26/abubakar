@@ -6,6 +6,16 @@ import Overview from "./views/Overview.vue";
 import Products from "./views/Products.vue";
 import Orders from "./views/Orders.vue";
 import Profile from "./views/Profile.vue";
+import Search from "./views/Search.vue";
+import Details from "./views/ProductsDetails.vue";
+import AllCategory from "./views/AllCategory.vue";
+import Category from "./views/Category.vue";
+import UserProfile from "./views/UserProfile.vue";
+import Wishlist from "./views/Wishlist.vue";
+import ProductVirtual from "./views/ProductVirtual.vue";
+import Promo from "./views/Promo.vue";
+import Upload from "./form/UploadForm.vue";
+import Payment from "./views/Transaksi.vue";
 import {fb} from './firebase';
 
 Vue.use(Router);
@@ -23,6 +33,57 @@ const router = new Router({
       path: '/home',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/search',
+      name: 'serach',
+      component: Search,
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: Details,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: UserProfile,
+    },
+    {
+      path: '/kategori',
+      name: 'kategori',
+      component: AllCategory,
+    },
+
+    {
+      path: '/kategori/sepeda',
+      name: 'sepeda',
+      component: Category,
+    },
+    {
+      path: '/wishlist',
+      name: 'wishlist',
+      component: Wishlist,
+    },
+    {
+      path: '/virtual',
+      name: 'produk virtual',
+      component: ProductVirtual,
+    },
+    {
+      path: '/promo',
+      name: 'promo',
+      component: Promo,
+    },
+    {
+      path: '/upload',
+      name: 'upload',
+      component: Upload,
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: Payment,
     },
     {
       path: '/admin',
@@ -70,6 +131,9 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
   ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 });
 
 

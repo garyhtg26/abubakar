@@ -2,105 +2,140 @@
   <div class="products" id="products" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
       <h1 style="color:white; margin-right:800px; padding-top:60px;" class="text-center "><i class="fa fa-bolt mr-2"></i>Flash Sale</h1>
       <div class="container">
-        <section  class="padding-bottom-sm p-5">
-
-
-<div class="row row-sm">
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/1.jpg"> </a>
+        <section  class="padding-bottom-sm ">
+            <b-row>
+      <b-col cols="12">
+        <carousel :perPage="6" navigationEnabled loop>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/2.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
-				<div class="price mt-1">Rp179.00</div> 
-        
-        <!-- price-wrap.// -->
-      <div class="progress my-1">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-<a>Hampir habis</a>
-<div style="margin-bottom:50px;"></div>
-
-			</figcaption>
-		</div>
-	</div> <!-- col.// -->
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/2.jpg"> </a>
-			<figcaption class="info-wrap">
-				<a href="#" class="title">Some item name here</a>
+				<router-link to="/product" class="title">Some item name here</router-link>
 				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
         <div class="progress my-1">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 <a>Hampir habis</a>
 <div style="margin-bottom:50px;"></div>
-
 			</figcaption>
 		</div>
-	</div> <!-- col.// -->
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/3.jpg"> </a>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/1.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Great product name here</a>
-				<div class="price mt-1">Rp56.00</div> <!-- price-wrap.// -->
-        <div class="progress my-1">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-<a>Hampir habis</a>
-<div style="margin-bottom:50px;"></div>
-
-			</figcaption>
-		</div>
-	</div> <!-- col.// -->
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/4.jpg"> </a>
-			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
-				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
-        <div class="progress my-1">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-<a>Hampir habis</a>
-<div style="margin-bottom:50px;"></div>
-
-			</figcaption>
-		</div>
-	</div> <!-- col.// -->
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/5.jpg"> </a>
-			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
-				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
-        <div class="progress my-1">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-<a>Hampir habis</a>
-<div style="margin-bottom:50px;"></div>
-
-			</figcaption>
-		</div>
-	</div> <!-- col.// -->
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/6.jpg"> </a>
-			<figcaption class="info-wrap">
-				<a href="#" class="title">Some item name here</a>
+				<router-link to="/product" class="title">Some item name here</router-link>
 				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
         <div class="progress my-1">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 <a>Hampir habis</a>
 <div style="margin-bottom:50px;"></div>
-
 			</figcaption>
 		</div>
-	</div> <!-- col.// -->
-
-</div> <!-- row.// -->
-</section>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/2.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/3.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/4.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/5.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/6.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/7.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+          <slide class="p-2">
+            <div href="/product" class="card card-sm card-product-grid">
+			<router-link to="/product" class="img-wrap"> <img src="../assets/images/items/8.jpg"> </router-link>
+			<figcaption class="info-wrap">
+				<router-link to="/product" class="title">Some item name here</router-link>
+				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
+        <div class="progress my-1">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+<a>Hampir habis</a>
+<div style="margin-bottom:50px;"></div>
+			</figcaption>
+		</div>
+          </slide>
+        </carousel>
+      </b-col>
+    </b-row>
+        </section>
           <!-- <h1 style="color:white; margin-right:800px;" class="text-center p-5"><i class="fa fa-bolt mr-2"></i>Flash Sale</h1>
           <div class="row">
   
@@ -134,12 +169,12 @@
 
 <script>
 import {db} from '../firebase';
- 
+import axios from 'axios';
 // import * as firebase from 'firebase';
 
 
 export default {
-
+  
   name: "Products-list",
   props: {
     msg: String
@@ -147,9 +182,7 @@ export default {
 
 data(){
     return {
-        products: [
-          
-        ],
+        products: [],
         image: require('@/assets/images/background1.png')
 
     }
@@ -159,6 +192,9 @@ data(){
 
     getImage(images){
       return images[0];
+    },
+    getItem(){
+      
     }
 
   },
@@ -191,8 +227,12 @@ data(){
 }
 .progress {
   
-  height: 10px !important;
+  height: 6px !important;
+  color: green;
 
+}
+.progress-bar {
+  background-color: rgb(5, 170, 5) !important;
 }
 .title {
   font-weight: 600;

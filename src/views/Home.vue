@@ -5,102 +5,10 @@
       <div style="margin-top:-2px; width:100%;" >
     <el-image :src="src2"></el-image>
   </div>
-        <div style="margin-left: 55px; margin-top: 50px;">
-     
-  <el-row :gutter="12">
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/game.png" alt="abubakar">
-      </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-   
-    </p></div></a></div>
-  
-    </el-col>
-   <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/booking.png" alt="abubakar">
-    </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-    
-    </p></div></a></div>
-    
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/umroh.png" alt="abubakar">
-     </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-   
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/wanita.png" alt="abubakar">
-     </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-   
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/tiket.png" alt="abubakar">
-     </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-   
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/emas.png" alt="abubakar">
-    </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-    
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img src="../assets/images/icon/zakat.png" alt="abubakar">
-     </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-  
-    </el-col>
-    <el-col :span="3">
-    
-    <div class="bl-flex-item mt-16 mb-16 bl-dope-container__grid-item" style="flex: 0 1 100%; max-width:105px;"><a href="https://www.abubakar.com/promo-campaign/bikinasik-newnormal?referrer=recommendation&amp;from=homepage-menu-1" <div class="bl-dope-item__body"><!----> <!----> <!----> 
-    <router-link to="/register">
-    <img :src="icon" alt="abubakar">
-     </router-link>
-    </div> <div class="bl-dope-item__footer"><!----> <!----> <p class="bl-text bl-text--body-default bl-text--semi-bold bl-text--ellipsis__2">
-      
-    </p></div></a></div>
-   
-  </el-col>
-  
-</el-row>
-  
+  <div class="container-fluid" style="margin:15px; margin-top: 50px;">
+  <TopUp></TopUp>
  </div>
- <div class="mx-4" style="padding:1em;margin-top: 30px;">
+ <div class="mx-4" style="margin-top: 50px;">
     <el-image style="height:150px;" :src="src"></el-image>
   </div>
   <div class="container-fluid m-5" style="margin-left:40px;">
@@ -115,7 +23,7 @@
  </div>
    
 
-      <section class="h-100" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
+      <section class="h-100 banner-iklan" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
         <div class="container py-5" >
   <div class="row">
     <div class="col-sm">
@@ -178,7 +86,7 @@
     </div>
   </header> -->
 </section> 
-<section  class="padding-bottom-sm mt-4" style="padding-right:100px; padding-left:100px;">
+<section  class="padding-bottom-sm mt-4 mb-2" style="padding-right:100px; padding-left:100px;">
 
 <header class="section-heading heading-line">
   <div class="blu-card recommended-product">
@@ -199,109 +107,109 @@
 
 <div class="row row-sm">
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/1.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/1.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/2.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/2.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Some item name here</a>
+				<router-link to=/product class="title">Some item name here</router-link>
 				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/3.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/3.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Great product name here</a>
+				<router-link to=/product class="title">Great product name here</router-link>
 				<div class="price mt-1">Rp56.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/4.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/4.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/5.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/5.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/6.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/6.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Some item name here</a>
+				<router-link to=/product class="title">Some item name here</router-link>
 				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/7.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/7.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Great product name here</a>
+				<router-link to=/product class="title">Great product name here</router-link>
 				<div class="price mt-1">Rp56.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/9.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/9.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/4.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/4.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/5.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/5.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Just another product name</a>
+				<router-link to=/product class="title">Just another product name</router-link>
 				<div class="price mt-1">Rp179.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/6.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/6.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Some item name here</a>
+				<router-link to=/product class="title">Some item name here</router-link>
 				<div class="price mt-1">Rp280.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
 	<div class="col-xl-2 col-lg-3 col-md-4 col-6">
-		<div href="#" class="card card-sm card-product-grid">
-			<a href="#" class="img-wrap"> <img src="../assets/images/items/7.jpg"> </a>
+		<div href=/product class="card card-sm card-product-grid">
+			<router-link to=/product class="img-wrap"> <img src="../assets/images/items/7.jpg"> </router-link>
 			<figcaption class="info-wrap">
-				<a href="#" class="title">Great product name here</a>
+				<router-link to=/product class="title">Great product name here</router-link>
 				<div class="price mt-1">Rp56.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
@@ -311,6 +219,7 @@
       <Login></Login>
       <mini-cart></mini-cart>
       <br>
+  
 <Footer></Footer>
   </div>
 
@@ -340,7 +249,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 @font-face {
   font-family: 'BukaPuasa';
   src: url('/assets/fonts/BukaPuasa.otf')  format('truetype');
@@ -359,6 +268,14 @@ a:hover,
 a:active{
     text-decoration: none !important;
 }
+.banner-iklan {
+      background-repeat: repeat;
+    background-position: right;
+}
+.card-sm .img-wrap {
+    height: 180px ;
+}
+
 .container-fluid{
    padding: 0;
 }
@@ -415,10 +332,7 @@ a:active{
     background-clip: border-box;
     border: 1px solid #ebecf0;
 }
-.card-sm {
-    min-height: 284px !important;
-    max-height: 340px !important;
-}
+
 .card .img-wrap {
     overflow: hidden;
 }
@@ -429,9 +343,7 @@ a:active{
 .card .img-wrap {
     overflow: hidden;
 }
-.card-sm .img-wrap {
-    height: 180px;
-}
+
 .card-product-grid .img-wrap {
     height: 250px;
 }
@@ -532,86 +444,8 @@ body {
     color: #fff;
     background-color: #B6AD15 !important;
 }
-.card-img-overlay {
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    border-style: dashed;
-    margin: auto;
-    padding: 0px;
-}
 
-/* kategori*/
 
-.baseplate img {
-    max-width: 100%;
-}
-.bl-dope-item__body img {
-   width: 100%;
-    height: auto;
-    min-width: 75px;
-    max-height: 80px;
-    display: block;
-    position: absolute;
-    margin: -8px;
-}
-.baseplate .bl-dope-container__grid-item {
-    margin-left: 20px;
-    /* margin-right: 20px; */
-}
-.mb-16 {
-    margin-bottom: 16px!important;
-}
-.bl-dope-item--medium .bl-dope-item__body {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 24px;
-}
-.bl-dope-item__body {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 12px;
-}
-.bl-dope-item__footer {
-    text-align: center;
-}
-.bl-text--body-default.bl-text--ellipsis__2 {
-    max-height: 48px;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-}
-.bl-dope-item {
-    display: block;
-}
-.bl-text--body-default {
-    font-size: 16px;
-    line-height: 1.25;
-}
-.bl-text--semi-bold {
-    font-weight: 600;
-}
-.bl-dope-item__badge {
-    display: inline-block;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    left: 100%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-.bl-capsule--informational {
-    background-color: #d2e9fa;
-    border-radius: 20px;
-}
-.bl-text--caption {
-    font-size: 13px;
-    line-height: 1.23077;
-    text-align: center;
-}
+
 
 </style>

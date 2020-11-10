@@ -5,7 +5,7 @@
         <div class="intro h-100">
             <div class="row h-100 align-items-center">
               <div class="col-md-6 ml-3">
-                    <h3>Profile settings</h3>
+                    <h3>Profile Toko</h3>
 
                  <p>
                    Change your profile settings here

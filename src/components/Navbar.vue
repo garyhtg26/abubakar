@@ -17,11 +17,11 @@
            <a to="/" class="kategori-text" >Kategory</a>
        
     </template>
-    <b-dropdown-item  >Motor</b-dropdown-item>
-    <b-dropdown-item  >Handphone</b-dropdown-item>
-    <b-dropdown-item  >Sepeda</b-dropdown-item>
-    <b-dropdown-item  >Olahraga</b-dropdown-item>
-    <b-dropdown-item  >Elektronik</b-dropdown-item>
+    <b-dropdown-item to="/kategori/sepeda"><i><img src="https://s4.bukalapak.com/athena/471/s-263-263/img_subcategory.jpeg.webp" style="display: inline; width:25px; height:25px;"></i> Motor</b-dropdown-item>
+    <b-dropdown-item to="/kategori/sepeda"><i><img src="https://s4.bukalapak.com/athena/7/s-263-263/img_subcategory.jpeg.webp" style="display: inline; width:25px; height:25px;"></i> Handphone</b-dropdown-item>
+    <b-dropdown-item to="/kategori/sepeda"><i><img src="https://s4.bukalapak.com/athena/64/s-263-263/img_subcategory.jpeg.webp" style="display: inline; width:25px; height:25px;"></i> Sepeda</b-dropdown-item>
+    <b-dropdown-item to="/kategori/sepeda"><i><img src="https://s4.bukalapak.com/athena/61/s-263-263/img_subcategory.jpeg.webp" style="display: inline; width:25px; height:25px;"></i> Olahraga</b-dropdown-item>
+    <b-dropdown-item to="/kategori/sepeda"><i><img src="https://s4.bukalapak.com/athena/510/s-263-263/img_subcategory.jpeg.webp" style="display: inline; width:25px; height:25px;"></i> Elektronik</b-dropdown-item>
 </b-dropdown>
             </li>
           
@@ -31,39 +31,73 @@
           <div  class="input-group md-form form-sm form-2 pl-1">
   <input style="  border:white; margin-right:50px; margin-left:10px;" class="form-control my-0 " type="text" placeholder="Cari Produk" aria-label="Search">
   <div class="input-group-append">
-    <span class="input-group-search" id="basic-text1"><i style="color:#495057;" class="button fa fa-search "
-        aria-hidden="true"></i></span>
+    <span class="input-group-search" id="basic-text1">
+      <router-link to="/search">
+      <i style="color:#495057;" class="button fa fa-search "
+        aria-hidden="true"></i>
+      </router-link>
+    </span>
   </div>
           </div>
         </div>
         <div class="mr-4"></div>
-        <div class="btn-header">
-          <b-nav-item-dropdown no-caret style="color:black !important; " class="nav" left>
+        <router-link to="/wishlist" class="btn-header">
+          <div style="cursor: pointer;margin-right:30px; margin-left:28px;color:black !important; " class="nav btn-header" left>
     <!-- Using 'button-content' slot -->
-    <template slot="button-content">
+ 
         <i class="btn-nav nohover fa fa-heart"></i>
        
+
+   
+          </div>
+        </router-link>
+
+        <div class="btn-header">
+          <div style="cursor: pointer;margin-right:30px; margin-left:20px;" class="nav">
+            <a data-toggle="modal" data-target="#miniCart">
+              <i class="btn-nav nohover fa fa-shopping-cart"></i>
+            </a>
+          </div>
+          
+        </div>
+
+        <div v-if="!$store.state.Authorization" class="btn-login-register">
+          <b-button  class="btn-masuk " data-toggle="modal" data-target="#login"><a  style="color:#AC9919;font-weight:100 !important;">Masuk</a></b-button>
+          <b-button  class="btn-daftar " data-toggle="modal" data-target="#login"><a  style=" font-weight:100 !important;">Daftar</a></b-button>
+        </div>
+        <!-- //login -->
+        <div v-if="$store.state.Authorization" class="btn-login-profile mr-3">
+<b-nav-item-dropdown no-caret style="color:#454545;" class="btn-header"  :text="username" left>
+    <!-- Using 'button-content' slot -->
+    <template slot="button-content">
+        <i class=" fa fa-envelope"></i>
+        <span class="badge badge-pill badge-danger notify">0</span>
     </template>
     <b-dropdown-item  >Chat</b-dropdown-item>
     <b-dropdown-item  >Diskusi</b-dropdown-item>
     <b-dropdown-item  >Ulasan</b-dropdown-item>
 </b-nav-item-dropdown>
-        </div>
+<b-nav-item-dropdown no-caret style="color:#454545;" class="btn-header"  :text="username" left>
+    <!-- Using 'button-content' slot -->
+    <template slot="button-content">
+        <i class="fa fa-store-alt"></i>
+        
+    </template>
+     <b-dropdown-item to="/profile">Buka Toko</b-dropdown-item>
+    
 
-        <div class="btn-header">
-          <router-link to="/" style="margin-right:30px; margin-left:20px;" class="nav">
-            <a data-toggle="modal" data-target="#miniCart">
-              <i class="btn-nav nohover fa fa-shopping-cart"></i>
-            </a>
-          </router-link>
-          
-        </div>
+</b-nav-item-dropdown>
+<b-nav-item-dropdown no-caret style="color:#454545;" class="btn-header"  :text="username" right>
+    <!-- Using 'button-content' slot -->
+    <template slot="button-content">
+        <i class="fa fa-user"></i>
+        <a style="padding-left:10px">user</a>
+    </template>
+     <b-dropdown-item to="/profile">Edit Profile</b-dropdown-item>
+    <b-dropdown-item @click="logout" >Logout</b-dropdown-item>
 
-        <div class="btn-login-register">
-          <b-button class="btn-masuk "><a data-toggle="modal" data-target="#login" style="color:#AC9919;font-weight:100 !important;">Masuk</a></b-button>
-          <b-button class="btn-daftar "><a data-toggle="modal" data-target="#login" style=" font-weight:100 !important;">Daftar</a></b-button>
+</b-nav-item-dropdown>
         </div>
-
      </div>
 
 </nav>
@@ -72,6 +106,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "Navbar",
   props: {
@@ -80,12 +115,22 @@ export default {
   components:{},
   data(){
     return {
-        
+        isLoggedIn: false,
         image: require('@/assets/images/nav/background2.png')
 
     }
+  },
+  methods: {
+    logout() {
+
+      this.$store.dispatch("logout");
+
+    },
+    
+
   }
 };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -94,16 +139,7 @@ export default {
   font-family: 'RamadhanKarim';
   src: url('/assets/fonts/RamadhanKarim.ttf')  format('truetype');
 }
-  @media (min-width: 992px) {
-
-    .navbar.custom-nav{
-      padding-top:16px;
-      padding-bottom:16px;
-      background-color: white !important;
-      
-    }
-
-   }
+  
    a{
      font-family: Arial, Helvetica, sans-serif;
 
@@ -119,6 +155,7 @@ export default {
    }
    /deep/ .nav-link {
      background-color: transparent !important;
+     margin: 5px !important;
    }
 
 /deep/.form-control:focus {
@@ -200,6 +237,15 @@ export default {
     align-items: center;
     width: 158px;
     margin: 0px 0px 0px 14px;
+    
+}
+.btn-login-profile{
+   display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    list-style: none;
 }
 /deep/ .nav {
   padding: 0rem 0.2rem !important;
@@ -230,7 +276,7 @@ border-radius: 20px;
     padding-left: 50px;
     padding-right: 25px; 
     width: 100%;
-   min-width: 1024px;
+
     display: flex;
     -webkit-box-align: center;
     align-items: center;

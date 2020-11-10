@@ -24,12 +24,12 @@
                             <h5 style="color:black;" class="text-center">Masuk</h5>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="email" v-model="form.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input type="password" @keyup.enter="login" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="password" @keyup.enter="login" v-model="form.password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
 
                              <div class="form-group">
@@ -42,17 +42,25 @@
                              <h5 style="color:black;" class="text-center">Daftar</h5>
 
                             <div class="form-group">
-                                <label for="name">Your name</label>
-                                <input type="text" v-model="name" class="form-control" id="name" placeholder="Your nice name">
+                                <label for="name">Nama</label>
+                                <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Nama ">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">No Hp</label>
+                                <input type="text" v-model="form.phone" class="form-control" id="phone" placeholder="No">
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email"  v-model="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                <label for="email">Email</label>
+                                <input type="email"  v-model="form.email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" v-model="password" class="form-control" id="password" placeholder="Password">
+                                <input type="password" v-model="form.password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"> Confirm Password</label>
+                                <input type="password" v-model="form.c_password" class="form-control" id="c_password" placeholder="Confirm Password">
                             </div>
 
                             <div class="form-group">
@@ -75,17 +83,16 @@
 <script>
 
 import { fb, db } from '../firebase';
-
+import axios from 'axios'
 export default {
   name: "Login",
+
   props: {
     msg: String
   },
   data() {
     return {
-      name: null,
-      email: null,
-      password: null,
+      form: {},
       image: require('@/assets/images/nav/background.png'),
       image1: require('@/assets/images/nav/background4.png')
     }
@@ -94,51 +101,25 @@ export default {
   methods: {
     login() {
 
-      fb.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          $('#login').modal('hide')
-          this.$router.replace('admin');
-        })
-        .catch(function (error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
-        });
+      this.$store.dispatch("login", this.form);
 
     },
     register() {
-      fb.auth().createUserWithEmailAndPassword(this.email, this.password)
-        .then((user) => {
-          $('#login').modal('hide')
-
-          db.collection("profiles").doc(user.user.uid).set({
-              name: this.name
-            })
-            .then(function () {
-              console.log("Document successfully written!");
-            })
-            .catch(function (error) {
-              console.error("Error writing document: ", error);
-            });
-
-          this.$router.replace('admin');
+      this.loading = true;
+      axios
+        .post("/auth/register", this.form)
+        .then((res) => {
+          this.$notify.success({
+            title: "Sukses",
+            message: res.data.message,
+          });
+          this.loading = false;
         })
-        .catch(function (error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          if (errorCode == 'auth/weak-password') {
-            alert('The password is too weak.');
-          } else {
-            alert(errorMessage);
-          }
-          console.log(error);
+        .catch((error) => {
+          this.$notify.error({
+            title: "Sorry :(",
+            message: error,
+          });
         });
     }
 
@@ -147,7 +128,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped  lang="scss">
   .modal-body{
         background-position: top;
     background-repeat: no-repeat;

@@ -25,11 +25,17 @@ window.Toast = Toast;
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store.js';
+import store from './stores';
 import Navbar from './components/Navbar.vue'
+import SellerNav from './components/SellerNav.vue'
 import Hero from './components/Hero.vue'
 import ProductList from './sections/ProductList.vue'
 import LagiPopuler from './sections/LagiPopuler.vue'
+import TopUp from './sections/TopUp.vue'
+import EditProfile from './profile/EditProfile.vue'
+import DaftarTransaksi from './profile/DaftarTransaksi.vue'
+import Komplain from './profile/Komplain.vue'
+import Chat from './profile/Chat.vue'
 import AddToCart from './components/AddToCart.vue'
 import MiniCart from './components/MiniCart.vue'
 import Footer from './components/Footer.vue'
@@ -43,10 +49,15 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'swiper/swiper-bundle.css'
 import VueCardCarousel from "vue-card-carousel";
 import VueCarousel from 'vue-carousel';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(VueCarousel);
 
+
+import axios from "axios";
+
+import VueCurrencyFilter from "vue-currency-filter";
+
+Vue.use(VueCurrencyFilter)
+Vue.use(VueCarousel);
+Vue.use(axios)
 Vue.use(VueCardCarousel)
 
 Vue.use(ElementUI);
@@ -71,14 +82,34 @@ Vue.use(Vue2Filters)
 Vue.config.productionTip = false;
 
 Vue.component('Navbar', Navbar);
+Vue.component('SellerNav', SellerNav);
 Vue.component('Footer', Footer);
 Vue.component('Hero', Hero);
 Vue.component('ProductList', ProductList);
 Vue.component('AddToCart', AddToCart);
 Vue.component('MiniCart', MiniCart);
 Vue.component('LagiPopuler', LagiPopuler);
+Vue.component('EditProfile', EditProfile);
+Vue.component('DaftarTransaksi', DaftarTransaksi);
+Vue.component('Komplain', Komplain);
+Vue.component('Chat', Chat);
+Vue.component('TopUp', TopUp);
 // Vue.component({Navbar, Hero, ProductList, AddToCart, MiniCart});
 
+if (store.state.authentication) {
+  axios.defaults.headers.common['Authorization'] =
+    'Bearer ' + store.state.authentication;
+}
+axios.defaults.baseURL = 'https://backend.abubakar.id/api/'
+
+Vue.use(VueCurrencyFilter, {
+  symbol: "Rp.",
+  thousandsSeparator: ".",
+  fractionCount: 0,
+  fractionSeparator: ",",
+  symbolPosition: "front",
+  symbolSpacing: true
+});
 
 let app = '';
 

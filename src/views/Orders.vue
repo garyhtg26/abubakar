@@ -5,7 +5,7 @@
         <div class="intro h-100">
             <div class="row h-100 justify-content-center align-items-center">
               <div class="col-md-6">
-                    <h3>Orders Page</h3>
+                    <h3>Orderan Kamu</h3>
 
                  <p>
                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, ducimus.
@@ -23,7 +23,7 @@
 
 
             <h3 class="d-inline-block">Orders list</h3>
-            <button @click="addNew" class="btn btn-primary float-right">Add Orders</button>
+            <button @click="addNew" class="btn btn-primary float-right">Kelola Orders</button>
 
             <div class="table-responsive">
 

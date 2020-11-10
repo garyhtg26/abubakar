@@ -1,5 +1,5 @@
 <template>
-    <footer v-bind:style="{ 'background-image': 'url(' + image1 + ')' }" style="background-color:rgb(21, 95, 57);" class="section-footer border-top">
+    <footer v-bind:style="{ 'background-image': 'url(' + image1 + ')' }" style="background-color:rgb(21, 95, 57); color:white;" class="section-footer border-top">
 	<div class="container" v-bind:style="{ 'background-image': 'url(' + image + ')' }">
 		<section class="footer-top padding-y">
 			<div class="row">
@@ -77,6 +77,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .title {
 	font-weight: bold;
 	font-size: 18px;

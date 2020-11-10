@@ -1,6 +1,6 @@
 <template>
 <div class="container-fluid p-3" style="margin-right:90px">
-<el-row >
+<el-row style="max-width:1200px; margin:auto;" >
   <el-col :span="4" >
       <img src="https://s4.bukalapak.com/athena/471/s-263-263/img_subcategory.jpeg.webp" class="image">   
   </el-col>

@@ -4,9 +4,9 @@
           <div class="intro h-100">
             <div class="row h-100 justify-content-center align-items-center">
               <div class="col-md-6">
-                 <h3>Overview Page</h3>
+                 <h3>Overview Penjualan Toko Kamu</h3>
                  <p>
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, ducimus.
+                   Disini grafik penjualan
                  </p>
               </div>
               <div class="col-md-6">
