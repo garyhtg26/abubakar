@@ -1,136 +1,26 @@
 <template>
   <div>
-    <!-- {{ params.category_id }} -->
-    <v-row>
-      <v-col cols="3">
-        <v-row align="center" justify="center" class="d-flex my-auto">
-          <v-col cols="12">
-            <v-expansion-panels
-              focusable
-              accordion
-              multiple
-              hover
-              v-model="panel"
-            >
-              <!-- kategori -->
-              <v-expansion-panel>
-                <v-expansion-panel-header>
-                  Filter Kategori
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-text-field
-                    v-model="search_cat"
-                    placeholder="Search ..."
-                    filled
-                    rounded
-                    dense
-                    class="mt-2"
-                  ></v-text-field>
-                  <v-treeview
-                    selectable
-                    hoverable
-                    @input="getFilter"
-                    :search="search_cat"
-                    :items="categories"
-                    v-model="params.category_id"
-                  ></v-treeview>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-              <!-- sort -->
-              <v-expansion-panel>
-                <v-expansion-panel-header> SortBy </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-row no-gutters>
-                    <v-col cols="12" class="mt-3">
-                      <v-select
-                        filled
-                        rounded
-                        placeholder="Urutkan Berdasarkan"
-                        :items="sortBy"
-                        dense
-                        v-model="params.sortBy"
-                      ></v-select>
-                      <v-btn block rounded elevation="0" @click="getFilter"
-                        >Filter</v-btn
-                      >
-                    </v-col>
-                  </v-row>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-              <!-- harga -->
-              <v-expansion-panel>
-                <v-expansion-panel-header>
-                  Filter Harga
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-row no-gutters>
-                    <v-col cols="12" class="mt-3">
-                      <v-text-field
-                        filled
-                        rounded
-                        placeholder="Price-min"
-                        dense
-                        v-model="params.min_price"
-                      ></v-text-field>
-                      <v-text-field
-                        filled
-                        rounded
-                        placeholder="Price-max"
-                        dense
-                        v-model="params.max_price"
-                      ></v-text-field>
-                      <v-btn @click="getFilter" block rounded elevation="0"
-                        >Filter</v-btn
-                      >
-                    </v-col>
-                  </v-row>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-              <!-- kota -->
-              <v-expansion-panel>
-                <v-expansion-panel-header>
-                  Filter Kota
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-row no-gutters>
-                    <v-col cols="12" class="mt-3">
-                      <v-autocomplete
-                        filled
-                        rounded
-                        placeholder="Filter Kota"
-                        :items="cities"
-                        item-text="city_name"
-                        item-value="city_name"
-                        dense
-                        v-model="params.kota"
-                      ></v-autocomplete>
-                      <v-btn block rounded elevation="0" @click="getFilter"
-                        >Filter</v-btn
-                      >
-                    </v-col>
-                  </v-row>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-            </v-expansion-panels>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="9" md="9">
-        <v-row>
-          <products-vue :data="data" />
-          <v-col cols="4" class="mx-auto">
-            <v-btn
-              class="mx-auto"
-              block
-              :loading="isLoading"
-              rounded
-              @click="check(page)"
-              >Load More</v-btn
-            >
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <products-vue :data="data" :isLoading="isLoading" />
+        </div>
+      </div>
+
+      <div class="mx-auto col-4">
+        <b-button
+          variant="success"
+          style="font-weight: 600; width: 50%"
+          class="mx-auto"
+          block
+          :loading="isLoading"
+          rounded
+          @click="check(page)"
+        >
+          Load More
+        </b-button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -141,6 +31,11 @@ import ProductsVue from "@/sections/Products.vue";
 export default {
   components: {
     ProductsVue,
+  },
+  props: {
+    itemLength: Function,
+    fCategories: Function,
+    fCities: Function,
   },
   data() {
     return {
@@ -180,16 +75,19 @@ export default {
     getData(page) {
       this.isLoading = true;
       const query = this.$route.query.search;
+      const data = {
+        query: query,
+        page: page,
+        "items-per-page": 12,
+      };
       if (query) {
-        Axios.get(
-          `/page/search/products/${query}?page=${page}&items-per-page=12`,
-          {
-            headers: { user_id: this.$store.state.user.id },
-          }
-        ).then((res) => {
+        Axios.post(`/page/search/products`, data, {
+          headers: { user_id: this.$store.state.user.id },
+        }).then((res) => {
           if (res.data.data.length > 0) {
             this.data.push(...res.data.data);
             this.isLoading = false;
+            if (this.itemLength) this.itemLength(this.data.length);
           } else {
             this.isLoading = false;
           }
@@ -201,6 +99,7 @@ export default {
           if (res.data.data.length > 0) {
             this.data.push(...res.data.data);
             this.isLoading = false;
+            if (this.itemLength) this.itemLength(this.data.length);
           } else {
             this.isLoading = false;
           }
@@ -210,11 +109,13 @@ export default {
     getCity() {
       Axios.get("/address/city").then((res) => {
         this.cities = res.data;
+        if (this.fCities) this.fCities(res.data);
       });
     },
     getCategories() {
       Axios.get("/page/categories?type=products").then((res) => {
         this.categories = res.data.data;
+        if (this.fCategories) this.fCategories(res.data.data);
       });
     },
     getFilter(pages) {
@@ -255,5 +156,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
